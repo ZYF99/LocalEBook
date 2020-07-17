@@ -2,8 +2,11 @@ package com.zhangyf.localebook.util;
 
 import android.content.Context;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.annotation.RequiresApi;
+
+import com.aspose.words.License;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,12 +29,15 @@ public class FileUtils {
     public static void copyAssetsDir(Context context, String fromDir, String destDir) throws IOException {
         String[] files = context.getAssets().list(fromDir);
         for (String r : files) {
-            String a = new File(context.getExternalCacheDir().getPath() + "book", r).getAbsolutePath();
+            String a= new File(context.getExternalCacheDir().getPath() + "book", r).getAbsolutePath();
             String[] typefiles = context.getAssets().list(fromDir + "/" + r);
-            for (String f : typefiles) {
-                copyFile(context.getAssets().open(fromDir + File.separator + r + File.separator + f),
-                        destDir + File.separator + r + File.separator + f);
+            for (String f : typefiles){
+                copyFile(context.getAssets().open(fromDir+ File.separator+ r +File.separator+ f),
+                        destDir + File.separator+ r +File.separator+ f);
             }
+
+
+
         }
     }
 
@@ -54,5 +60,6 @@ public class FileUtils {
             e.printStackTrace();
         }
     }
+
 
 }

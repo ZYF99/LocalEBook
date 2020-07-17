@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.zhangyf.localebook"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -44,14 +44,35 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':lib_fileviewer')
+    implementation files('libs\\words.jar')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
     implementation "com.google.android.material:material:1.1.0"
+
+    implementation 'pub.devrel:easypermissions:1.1.0'
     //SharedPreferences utils
     implementation 'com.orhanobut:hawk:2.0.1'
     //CardView
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'org.apache.poi:poi:3.17'
+    // Excel XLS
+    implementation 'org.apache.poi:poi-ooxml:3.17'
+    // Excel XLSX DOCX
+    implementation 'org.apache.poi:poi-scratchpad:3.17'
+    // Word DOC
+    implementation 'org.apache.poi:poi-ooxml-schemas:3.17'
+/*    implementation files('libs/xdocreport-2.0.1.jar')
+    implementation files('libs/rt.jar')*/
+    //项目要使用iText
+    //implementation 'com.itextpdf:itextpdf:5.5.13.1'
+    implementation 'com.itextpdf.tool:xmlworker:5.5.11'
+    implementation 'org.apache.xmlbeans:xmlbeans:3.1.0'
+    implementation 'org.apache.commons:commons-collections4:4.4'
+    //输出中文，还要引入下面itext-asian.jar包
+    implementation 'com.itextpdf:itext-asian:5.2.0'
+    implementation 'org.jsoup:jsoup:1.11.3'
+
 
 }
