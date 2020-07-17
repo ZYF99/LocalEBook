@@ -13,7 +13,6 @@ import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import com.hanlyjiang.library.fileviewer.FileViewer
 import com.zhangyf.localebook.R
 import com.zhangyf.localebook.adapter.BookListRecyclerViewAdapter
 import com.zhangyf.localebook.databinding.FragmentListBinding

@@ -82,11 +82,12 @@ class DetailActivity : AppCompatActivity() {
             }
         })
         binding?.btnPre?.setOnClickListener {
-            binding?.twvWebview?.findNext(true)
-        }
-        binding?.btnPre?.setOnClickListener {
             binding?.twvWebview?.findNext(false)
         }
+        binding?.btnNext?.setOnClickListener {
+            binding?.twvWebview?.findNext(true)
+        }
+
 
     }
 
